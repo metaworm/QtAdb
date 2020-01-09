@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="QtAdb"/>
+  <qresource prefix="新前缀">
+    <file>C:/Windows/xsbao.ico</file>
+  </qresource>
+</RCC>

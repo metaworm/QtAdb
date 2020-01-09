@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QtAdbClass</class>
+ <widget class="QMainWindow" name="QtAdbClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1572</width>
+    <height>1245</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QtAdb</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QSplitter" name="splitter_v">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <widget class="QSplitter" name="splitter_h">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>常用功能</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <layout class="QHBoxLayout" name="layout1">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetDefaultConstraint</enum>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>当前设备(&amp;D)：</string>
+             </property>
+             <property name="buddy">
+              <cstring>comboDevice</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboDevice">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>200</width>
+               <height>0</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>模拟输入(&amp;I)：</string>
+             </property>
+             <property name="buddy">
+              <cstring>lineInputText</cstring>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineInputText">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="placeholderText">
+              <string>输入文本</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>截图(&amp;C)</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWidget">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">selection-background-color: rgb(204, 232, 255);
+background-color: rgb(255, 255, 255);
+selection-color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::EditKeyPressed</set>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="showGrid">
+            <bool>false</bool>
+           </property>
+           <property name="gridStyle">
+            <enum>Qt::SolidLine</enum>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderMinimumSectionSize">
+            <number>25</number>
+           </attribute>
+           <attribute name="verticalHeaderDefaultSectionSize">
+            <number>25</number>
+           </attribute>
+           <row>
+            <property name="text">
+             <string>拨打电话</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>发送短信</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string/>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>当前Activity</string>
+            </property>
+           </row>
+           <row>
+            <property name="text">
+             <string>列举安卓用户</string>
+            </property>
+           </row>
+           <column>
+            <property name="text">
+             <string>命令(双击执行，F2修改)</string>
+            </property>
+           </column>
+           <item row="0" column="0">
+            <property name="text">
+             <string>am start -a android.intent.action.CALL -d tel:10000</string>
+            </property>
+           </item>
+           <item row="1" column="0">
+            <property name="text">
+             <string>am start -a android.intent.action.SENDTO -d sms:10086 --es sms_body  hello</string>
+            </property>
+           </item>
+           <item row="2" column="0">
+            <property name="text">
+             <string>service list</string>
+            </property>
+           </item>
+           <item row="3" column="0">
+            <property name="text">
+             <string>dumpsys statusbar</string>
+            </property>
+           </item>
+           <item row="4" column="0">
+            <property name="text">
+             <string>dumpsys cpuinfo</string>
+            </property>
+           </item>
+           <item row="5" column="0">
+            <property name="text">
+             <string>dumpsys activity top</string>
+            </property>
+           </item>
+           <item row="6" column="0">
+            <property name="text">
+             <string>am kill-all</string>
+            </property>
+           </item>
+           <item row="7" column="0">
+            <property name="text">
+             <string>dumpsys window w | grep name= | awk '/name=StatusBar/{getline; print}'</string>
+            </property>
+           </item>
+           <item row="8" column="0">
+            <property name="text">
+             <string>pm list users</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>APP</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QTableWidget" name="appList">
+            <property name="contextMenuPolicy">
+             <enum>Qt::ActionsContextMenu</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">selection-background-color: rgb(204, 232, 255);
+selection-color: rgb(0, 0, 0);</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="editTriggers">
+             <set>QAbstractItemView::NoEditTriggers</set>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::SingleSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectRows</enum>
+            </property>
+            <property name="showGrid">
+             <bool>false</bool>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderMinimumSectionSize">
+             <number>10</number>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>100</number>
+            </attribute>
+            <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderMinimumSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>20</number>
+            </attribute>
+            <attribute name="verticalHeaderHighlightSections">
+             <bool>false</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>名称</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>路径</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>文件</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QSplitter" name="splitterFs">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <widget class="QTreeWidget" name="treeFs">
+             <property name="indentation">
+              <number>15</number>
+             </property>
+             <property name="sortingEnabled">
+              <bool>false</bool>
+             </property>
+             <property name="animated">
+              <bool>false</bool>
+             </property>
+             <column>
+              <property name="text">
+               <string>文件</string>
+              </property>
+             </column>
+            </widget>
+            <widget class="QTableWidget" name="tableFs">
+             <property name="styleSheet">
+              <string notr="true">selection-background-color: rgb(204, 232, 255);
+selection-color: rgb(0, 0, 0);</string>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SingleSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectRows</enum>
+             </property>
+             <property name="showGrid">
+              <bool>false</bool>
+             </property>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderMinimumSectionSize">
+              <number>20</number>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>20</number>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>文件</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>权限</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>用户</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>组</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>大小</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>链接</string>
+              </property>
+             </column>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_4">
+         <attribute name="title">
+          <string>进程</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QTreeWidget" name="treePs">
+            <property name="indentation">
+             <number>15</number>
+            </property>
+            <property name="sortingEnabled">
+             <bool>false</bool>
+            </property>
+            <column>
+             <property name="text">
+              <string>进程</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>PID</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>用户</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>内存</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>命令行</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox">
+       <property name="title">
+        <string>日志</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPlainTextEdit" name="logEdit"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionUninstall">
+   <property name="text">
+    <string>卸载</string>
+   </property>
+  </action>
+  <action name="actionClearSelect">
+   <property name="text">
+    <string>清除选择</string>
+   </property>
+   <property name="toolTip">
+    <string>清除</string>
+   </property>
+  </action>
+  <action name="actionUpdateAppList">
+   <property name="text">
+    <string>刷新列表</string>
+   </property>
+   <property name="toolTip">
+    <string>刷新列表</string>
+   </property>
+  </action>
+  <action name="actionDumpService">
+   <property name="text">
+    <string>查看服务</string>
+   </property>
+   <property name="toolTip">
+    <string>dumpsys activity s</string>
+   </property>
+  </action>
+  <action name="actionDumpPackage">
+   <property name="text">
+    <string>查看包信息</string>
+   </property>
+   <property name="toolTip">
+    <string>dumpsys package</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="text">
+    <string>启动</string>
+   </property>
+   <property name="toolTip">
+    <string>启动应用</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="text">
+    <string>停止运行</string>
+   </property>
+   <property name="toolTip">
+    <string>am force-stop</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="QtAdb.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionUninstall</sender>
+   <signal>triggered()</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>uninstall()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>483</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionClearSelect</sender>
+   <signal>triggered()</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>clearAppSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>483</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineInputText</sender>
+   <signal>returnPressed()</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>inputText()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>820</x>
+     <y>64</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>418</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionUpdateAppList</sender>
+   <signal>triggered()</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>updateAppList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>483</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDumpService</sender>
+   <signal>triggered()</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>execActionCommand()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>512</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionDumpPackage</sender>
+   <signal>triggered()</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>execActionCommand()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>674</x>
+     <y>512</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionStart</sender>
+   <signal>triggered()</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>startApp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>697</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tableWidget</sender>
+   <signal>itemDoubleClicked(QTableWidgetItem*)</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>onCommandDblClicked(QTableWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>856</x>
+     <y>347</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>614</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionStop</sender>
+   <signal>triggered()</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>execActionCommand()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>697</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>appList</sender>
+   <signal>pressed(QModelIndex)</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>onTablePressed(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1446</x>
+     <y>372</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>917</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeFs</sender>
+   <signal>expanded(QModelIndex)</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>onFileExpanded(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1242</x>
+     <y>374</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>721</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tabWidget</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>onTabChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1139</x>
+     <y>74</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>394</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treeFs</sender>
+   <signal>itemExpanded(QTreeWidgetItem*)</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>onFileExpanded(QTreeWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1242</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>593</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onTabChanged(int)</slot>
+  <slot>uninstall()</slot>
+  <slot>clearAppSelection()</slot>
+  <slot>inputText()</slot>
+  <slot>updateAppList()</slot>
+  <slot>execShellCommand(QString)</slot>
+  <slot>execActionCommand()</slot>
+  <slot>startApp()</slot>
+  <slot>onCommandDblClicked(QTableWidgetItem*)</slot>
+  <slot>onFileExpanded(QTreeWidgetItem*)</slot>
+  <slot>onTablePressed(QModelIndex)</slot>
+ </slots>
+</ui>
