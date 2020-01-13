@@ -9,6 +9,7 @@
 #include "ui_QtAdb.h"
 
 #include "AdbDevice.h"
+#include "PsDlg.h"
 
 using namespace std;
 
@@ -457,6 +458,13 @@ public slots:
             }
         }
         parent->setExpanded(true);
+    }
+
+    void onPsTreeItemDoubleClicked(QTreeWidgetItem *item)
+    {
+        auto dlg = new PsDlg(this, cd, item->text(1).toInt());
+        dlg->setModal(true);
+        dlg->show();
     }
 
 private:

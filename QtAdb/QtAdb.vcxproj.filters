@@ -34,14 +34,23 @@
     <ClCompile Include="AdbDevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PsDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="QtAdb.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="PsDlg.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="QtAdb.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="PsDlg.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>

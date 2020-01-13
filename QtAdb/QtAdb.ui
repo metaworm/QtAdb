@@ -587,7 +587,7 @@ selection-color: rgb(0, 0, 0);</string>
    <slot>inputText()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>820</x>
+     <x>769</x>
      <y>64</y>
     </hint>
     <hint type="destinationlabel">
@@ -715,8 +715,8 @@ selection-color: rgb(0, 0, 0);</string>
    <slot>onFileExpanded(QModelIndex)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1242</x>
-     <y>374</y>
+     <x>1217</x>
+     <y>409</y>
     </hint>
     <hint type="destinationlabel">
      <x>721</x>
@@ -747,12 +747,44 @@ selection-color: rgb(0, 0, 0);</string>
    <slot>onFileExpanded(QTreeWidgetItem*)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1242</x>
-     <y>240</y>
+     <x>1217</x>
+     <y>275</y>
     </hint>
     <hint type="destinationlabel">
      <x>593</x>
      <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treePs</sender>
+   <signal>doubleClicked(QModelIndex)</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>onPsTreeDblClicked(QModelIndex)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1154</x>
+     <y>288</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>884</x>
+     <y>-17</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>treePs</sender>
+   <signal>itemDoubleClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>QtAdbClass</receiver>
+   <slot>onPsTreeItemDoubleClicked(QTreeWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1303</x>
+     <y>246</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1207</x>
+     <y>-16</y>
     </hint>
    </hints>
   </connection>
@@ -769,5 +801,6 @@ selection-color: rgb(0, 0, 0);</string>
   <slot>onCommandDblClicked(QTableWidgetItem*)</slot>
   <slot>onFileExpanded(QTreeWidgetItem*)</slot>
   <slot>onTablePressed(QModelIndex)</slot>
+  <slot>onPsTreeItemDoubleClicked(QTreeWidgetItem*)</slot>
  </slots>
 </ui>

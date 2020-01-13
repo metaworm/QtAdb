@@ -190,9 +190,10 @@ public:
         return adb_l(QStringList{"-s", name, "shell"} + args);
     }
 
-    ShellResult shell(const QStringList& args)
+    ShellResult shell(const QStringList& args, bool root = false)
     {
-        return adb(QStringList{"-s", name, "shell"} + args);
+        return root ? adb(QStringList{"-s", name, "shell", "su", "-c"} + args)
+                    : adb(QStringList{"-s", name, "shell"} + args);
     }
 
     // 设备型号
