@@ -6,7 +6,7 @@ PsDlg::PsDlg(QWidget *parent, AdbDevice *cd, int pid)
 {
     ui.setupUi(this);
 
-    updateMemory();
+    onTabChanged(ui.tabWidget->currentIndex());
     TableFilter::install(ui.tableMemory);
 }
 

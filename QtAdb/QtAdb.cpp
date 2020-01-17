@@ -59,3 +59,11 @@ QtAdb::QtAdb(QWidget *parent)
     // 功能数据初始化
     comboDevice->updateDevices();
 }
+
+QStringList QtAdb::getPath(QTreeWidgetItem *item)
+{
+    QStringList path;
+    for (auto p = item; p; p = p->parent())
+        path.push_front(p->text(0));
+    return path;
+}

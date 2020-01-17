@@ -380,17 +380,23 @@ public slots:
         return cd->shell({ "ls -lh " + dir + " | awk 'NR>1{sub(/, +/,\",\");print}'" });
     }
 
+    static QStringList getPath(QTreeWidgetItem *item);
+
     void onFileExpanded(QTreeWidgetItem *item)
     {
-        QStringList path;
-        for (auto p = item; p; p = p->parent())
-            path.push_front(p->text(0));
-        path.push_front(""); path.push_back("");
+        QStringList path = getPath(item);
+        path.front() = "";
+        path.push_back("");
 
         if (0 == item->childCount())
         {
             updateDirs(path.join("/"), item);
         }
+    }
+
+    void onFileItemChanged(QTreeWidgetItem *item, QTreeWidgetItem *old)
+    {
+        onFileExpanded(item);
     }
 
     void updateDirs(const QString& dir, QTreeWidgetItem *parent = nullptr)

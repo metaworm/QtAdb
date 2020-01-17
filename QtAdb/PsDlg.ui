@@ -17,8 +17,18 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>状态</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QPlainTextEdit" name="textStatus"/>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="tab">
       <attribute name="title">
        <string>内存</string>
@@ -68,22 +78,22 @@ selection-color: rgb(0, 0, 0);</string>
          </column>
          <column>
           <property name="text">
-           <string>大小</string>
+           <string>vm_pgoff</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>2</string>
+           <string>设备号</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>3</string>
+           <string>节点号</string>
           </property>
          </column>
          <column>
           <property name="text">
-           <string>映像</string>
+           <string>文件名</string>
           </property>
          </column>
         </widget>
@@ -92,7 +102,7 @@ selection-color: rgb(0, 0, 0);</string>
      </widget>
      <widget class="QWidget" name="tab_2">
       <attribute name="title">
-       <string>Tab 2</string>
+       <string>线程</string>
       </attribute>
      </widget>
     </widget>
@@ -100,5 +110,25 @@ selection-color: rgb(0, 0, 0);</string>
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>tabWidget</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>PsDlg</receiver>
+   <slot>onTabChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>252</x>
+     <y>26</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>429</x>
+     <y>-32</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>onTabChanged(int)</slot>
+ </slots>
 </ui>

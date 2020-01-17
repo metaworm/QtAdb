@@ -26,7 +26,7 @@ public:
             auto size = p.next();
             auto f1 = p.next();
             auto f2 = p.next();
-            auto image = p.next();
+            auto image = p.rest();
 
             ui.tableMemory->insertRow(i);
             ui.tableMemory->setItem(i, 0, new QTableWidgetItem(begin));
@@ -39,6 +39,31 @@ public:
 
             ++i;
         }
+    }
+
+    void updateThread()
+    {
+        int i = 0;
+        for (auto l : cd->shell({ "cat", "/proc/" + QString::number(pid) + "/task" }, true))
+        {
+        }
+    }
+
+    void updateStatus()
+    {
+        ui.textStatus->setPlainText(cd->shell({ "cat", "/proc/" + QString::number(pid) + "/status" }, true));
+    }
+
+public slots:
+    void onTabChanged(int i)
+    {
+        auto label = ui.tabWidget->tabText(i);
+        if (label == "状态")
+            updateStatus();
+        if (label == "内存")
+            updateMemory();
+        if (label == "线程")
+            updateThread();
     }
 
 private:
